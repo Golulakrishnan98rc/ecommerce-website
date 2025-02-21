@@ -12,7 +12,7 @@ const app = express();
 const port = 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*", credentials: true }));
 
 // MongoDB Database
 mongoose
@@ -280,7 +280,7 @@ app.post("/removefromcart", fetchUser, async (req, res) => {
 app.post("/getcart", fetchUser, async (req, res) => {
   console.log("GetCart");
   let userData = await Users.findOne({ _id: req.user.id });
-  res.json(userData.cartData)
+  res.json(userData.cartData);
 });
 
 app.listen(port, (error) => {
