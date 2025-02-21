@@ -6,23 +6,20 @@ const path = require("path");
 const cors = require("cors");
 const { type } = require("os");
 const { error } = require("console");
+require("dotenv").config();
 
 const app = express();
 
 const port = 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 // MongoDB Database
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((error) => {
-    console.error("Error connecting to MongoDB:", error);
-  });
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.error("Error connecting to MongoDB:", error));
 
 app.get("/", (req, res) => {
   res.send("Home page");
