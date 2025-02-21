@@ -57,7 +57,7 @@ app.post("/uploads", uploads.single("product"), (req, res) => {
   }
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`,
+    image_url: `https://ecommerce-website-5vn0.onrender.com/images/${req.file.filename}`,
   });
 });
 

@@ -17,7 +17,7 @@ const LoginSignUpFrom = () => {
     console.log("Login", formData);
 
     try {
-      const response = await fetch("http://localhost:4000/login", {
+      const response = await fetch("https://ecommerce-website-5vn0.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const LoginSignUpFrom = () => {
   const signup = async () => {
     console.log("signup", formData);
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch("https://ecommerce-website-5vn0.onrender.com/signup", {
       method: "POST",
       headers: {
         Accept: "application/json",
