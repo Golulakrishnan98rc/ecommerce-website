@@ -16,9 +16,7 @@ app.use(cors());
 
 // MongoDB Database
 mongoose
-  .connect(
-    ""
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
   })
