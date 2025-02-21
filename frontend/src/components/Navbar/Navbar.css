@@ -1,0 +1,169 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0px 1px 3px -2px black;
+}
+
+.navbar .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  width: 40px;
+}
+
+.nav-logo p {
+  font-size: 30px;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #4e4e4e;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li hr {
+  height: 1px;
+  width: 30px;
+  background: red;
+  margin-top: -5px;
+  transition: all 0.3s ease;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-login-cart button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: 0;
+  cursor: pointer;
+  padding: 7px 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-login-cart button:active {
+  background-color: #f3f3f3;
+}
+
+.nav-login-cart img {
+  width: 32px;
+}
+
+.nav-cart-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  margin-top: -23px;
+  margin-left: -40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-dropdown {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+
+  .nav-logo img {
+    width: 25px;
+  }
+
+  .nav-logo p {
+    font-size: 18px;
+  }
+  .nav-menu {
+    font-size: 16px;
+  }
+  .nav-login-cart {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 25px;
+  }
+  .nav-menu {
+    gap: 18px;
+    font-size: 14px;
+  }
+  .nav-login-cart button {
+    padding: 7px 14px;
+  }
+
+  .nav-login-cart img {
+    width: 27px;
+  }
+
+  .nav-cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    margin-top: -26px;
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 0px;
+  }
+
+  .nav-dropdown {
+    display: block;
+    width: 25px;
+    margin: 0 15px;
+    height: 25px;
+    transition: 0.5s;
+  }
+
+  .nav-menu {
+    display: none;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    justify-content: center;
+    top: 50px;
+  }
+  .nav-menu-visible {
+    display: flex;
+  }
+  .nav-dropdown.open {
+    rotate: 180deg;
+  }
+}
+
+@media (max-width: 500px) {
+}

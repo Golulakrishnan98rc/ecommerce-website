@@ -1,0 +1,160 @@
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(180deg, #fde1ff, #e1ffe2aa 60%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 140px;
+  line-height: 1.1;
+}
+
+.hero-left h2 {
+  font-size: 20px;
+  color: #090909;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.hero-left p {
+  font-size: 60px;
+  color: #070707;
+  font-weight: 500;
+}
+
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-hand-icon img {
+  width: 70px;
+}
+
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 40px;
+  border-radius: 70px;
+  margin-top: 20px;
+  background-color: #ff4141;
+  color: #fff;
+  font-size: 19px;
+  width: fit-content;
+}
+
+.hero-right {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 140px;
+}
+
+.hero-right img {
+  width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .hero-left {
+    padding-left: 120px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+  .hero-left p {
+    font-size: 50px;
+  }
+  .hero-hand-icon img {
+    width: 60px;
+  }
+  .hero-latest-btn {
+    font-size: 15px;
+    padding: 16px 30px;
+  }
+  .hero-right {
+    flex: 0.6;
+  }
+  .hero-right img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero-left {
+    padding-left: 80px;
+  }
+
+  .hero-left h2 {
+    font-size: 18px;
+  }
+  .hero-left p {
+    font-size: 38px;
+  }
+  .hero-hand-icon img {
+    width: 40px;
+  }
+  .hero-latest-btn {
+    font-size: 14px;
+    padding: 14px 26px;
+  }
+  .hero-right {
+    flex: 0.6;
+  }
+  .hero-right img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: 75vh;
+  }
+  .hero-left {
+    padding-left: 30px;
+  }
+
+  .hero-left h2 {
+    font-size: 16px;
+  }
+  .hero-left p {
+    font-size: 34px;
+  }
+  .hero-hand-icon img {
+    width: 32px;
+  }
+  .hero-latest-btn {
+    font-size: 13px;
+    padding: 14px 26px;
+  }
+  .hero-right {
+    flex: 0.6;
+  }
+  .hero-right img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-right {
+    display: none;
+  }
+}
