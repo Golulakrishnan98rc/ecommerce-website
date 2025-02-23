@@ -1,0 +1,8 @@
+# Ignore environment files
+backend/.env
+
+# Ignore node_modules for all projects
+node_modules/
+
+# Ignore git-filter-repo folder
+git-filter-repo/
